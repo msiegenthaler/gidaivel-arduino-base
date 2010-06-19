@@ -14,7 +14,7 @@
 </extensions>
 </storageModule>
 <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-<configuration artifactExtension="a" artifactName="gidaivel-xbee-base" buildArtefactType="de.innot.avreclipse.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=de.innot.avreclipse.buildArtefactType.staticLib" cleanCommand="rm -f" description="" id="de.innot.avreclipse.configuration.lib.debug.2006256067" name="Boarduino" parent="de.innot.avreclipse.configuration.lib.debug">
+<configuration artifactExtension="a" artifactName="gidaivel-arduino-base" buildArtefactType="de.innot.avreclipse.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=de.innot.avreclipse.buildArtefactType.staticLib" cleanCommand="rm -f" description="" id="de.innot.avreclipse.configuration.lib.debug.2006256067" name="Boarduino" parent="de.innot.avreclipse.configuration.lib.debug">
 <folderInfo id="de.innot.avreclipse.configuration.lib.debug.2006256067." name="/" resourcePath="">
 <toolChain id="de.innot.avreclipse.toolchain.winavr.lib.debug.90830958" name="AVR-GCC Toolchain" superClass="de.innot.avreclipse.toolchain.winavr.lib.debug">
 <option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.debug.1224016400" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.debug"/>
