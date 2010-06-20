@@ -34,9 +34,25 @@ public:
 	void process(XBeeAddress from, uint8_t* request, uint8_t request_length);
 
 protected:
+	/**
+	 * Process a call.
+	 */
 	virtual void processCall(uint16_t callType, XBeeAddress from, uint8_t* payload, uint8_t payload_length);
+	/**
+	 * Process a request by 'from'.
+	 * @return true if successfully processed and answered with a reply message
+	 * 		   false if the request type is unknown. This class will respond with a service-request-unknown-message
+	 */
 	virtual bool processRequest(uint16_t requestType, XBeeAddress from, uint8_t* payload, uint8_t payload_length);
+	/**
+	 * Add a subscription for a subscription type.
+	 * @return true if successful: this class will send a subscription-confirm-message to 'from'
+	 * 		   false if unknown type: this class will send a subscription-unknown-message to 'from'
+	 */
 	virtual bool addSubscription(XBeeAddress from, uint16_t subscriptionType);
+	/**
+	 * Remove the subscription. Ignore unknown or not registered subscriptions.
+	 */
 	virtual void removeSubscription(XBeeAddress from, uint16_t subscriptionType);
 
 	/**

@@ -51,7 +51,10 @@ void AvieulService::process(XBeeAddress from, uint8_t* request, uint8_t request_
 		//subscribe
 		if (request_length<4) return;
 		uint16_t subscriptionType = parseType(request + offset(2));
-		if (!addSubscription(from, subscriptionType)) {
+		if (addSubscription(from, subscriptionType))  {
+			uint8_t data[] = { 0x42, _index, request[2], request[3]};
+			_sender->send(from, data, 4);
+		} else {
 			uint8_t data[] = { 0x4F, _index, request[2], request[3]};
 			_sender->send(from, data, 4);
 		}
