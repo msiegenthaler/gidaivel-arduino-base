@@ -56,9 +56,13 @@ protected:
 	virtual void removeSubscription(XBeeAddress from, uint16_t subscriptionType);
 
 	/**
-	 * Fills the first 4 bytes of the response
+	 * Fills the first 4 bytes of the response.
 	 */
 	void fillResponseHeader(uint8_t *buffer, uint16_t requestType);
+	/**
+	 * Fills the first 4 bytes of a publish message.
+	 */
+	void fillPublishHeader(uint8_t *buffer, uint16_t subscriptionType);
 
 protected:
 	uint32_t _type;

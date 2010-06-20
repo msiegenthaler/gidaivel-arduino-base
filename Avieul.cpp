@@ -75,6 +75,13 @@ void AvieulService::fillResponseHeader(uint8_t *buffer, uint16_t requestType) {
 	buffer[3] = requestType & 0xFF;
 }
 
+void AvieulService::fillPublishHeader(uint8_t *buffer, uint16_t subscriptionType) {
+	buffer[0] = 0x49;
+	buffer[1] = _index;
+	buffer[2] = (subscriptionType >> 8) & 0xFF;
+	buffer[3] = subscriptionType & 0xFF;
+}
+
 void AvieulService::processCall(uint16_t callType, XBeeAddress from, uint8_t* payload, uint8_t payload_length) {
 #ifdef DEBUG_AVIEUL
 	Serial.print("A-srv ");
