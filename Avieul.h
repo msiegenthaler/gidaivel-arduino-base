@@ -5,7 +5,7 @@
 #import "../arduino-xbee/Series1XBee.h"
 
 
-#define DEBUG_AVIEUL  //define for serial debug messages
+//#define DEBUG_AVIEUL  //define for serial debug messages
 
 
 class AvieulService;
